@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Full Stack Bootcamp",
+    title: "Zeroes and Ones",
     author: "Cristobal Heiss",
   },
   /* Your site config here */

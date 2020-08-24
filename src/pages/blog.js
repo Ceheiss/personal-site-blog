@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import blogStyles from "./blog.module.scss"
 import formatDate from "../helpers/formatDate"
+import sortDates from "../helpers/sortDates"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,13 +26,7 @@ const BlogPage = () => {
     }
   `)
 
-  const sortedList = data.allMarkdownRemark.edges
-    .sort(
-      (a, b) =>
-        new Date(a.node.frontmatter.date) - new Date(b.node.frontmatter.date)
-    )
-    .reverse()
-  console.log(sortedList)
+  const sortedList = sortDates(data.allMarkdownRemark.edges)
 
   const blogPostsList = sortedList.map((blogPost, i) => {
     const { title, date } = blogPost.node.frontmatter

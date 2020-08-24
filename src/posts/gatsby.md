@@ -9,7 +9,7 @@ loremIpsum
 
 blah blah blah
 
-![Info](./lol.png)
+![Info](../images/lol.png)
 
 ## Topics covered:
 

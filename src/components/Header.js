@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import HeaderStyles from "./Header.module.scss"
 
-const Header = () => {
+const Header = ({ showComplete }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -15,15 +15,17 @@ const Header = () => {
 
   return (
     <header className={HeaderStyles.header}>
-      <h1>
-        <Link
-          className={HeaderStyles.title}
-          activeClassName={HeaderStyles.activeNavItem}
-          to="/"
-        >
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
+      {showComplete ? (
+        <h1>
+          <Link
+            className={HeaderStyles.title}
+            activeClassName={HeaderStyles.activeNavItem}
+            to="/"
+          >
+            {data.site.siteMetadata.title}
+          </Link>
+        </h1>
+      ) : null}
       <nav>
         <ul className={HeaderStyles.navList}>
           <li>

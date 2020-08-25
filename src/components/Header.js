@@ -37,15 +37,7 @@ const Header = ({ showComplete }) => {
               Home
             </Link>
           </li>
-          <li>
-            <Link
-              className={HeaderStyles.navItem}
-              activeClassName={HeaderStyles.activeNavItem}
-              to="/about"
-            >
-              About
-            </Link>
-          </li>
+          <li className={HeaderStyles.navItem}>|</li>
           <li>
             <Link
               className={HeaderStyles.navItem}
@@ -53,15 +45,6 @@ const Header = ({ showComplete }) => {
               to="/blog"
             >
               Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={HeaderStyles.navItem}
-              activeClassName={HeaderStyles.activeNavItem}
-              to="/contact"
-            >
-              Contact
             </Link>
           </li>
         </ul>

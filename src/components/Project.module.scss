@@ -1,5 +1,13 @@
-.project {
-  background: mediumaquamarine;
-  padding: 10px;
+.container {
+  min-width: 700px;
+  min-height: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-image {
+  background: teal;
   border-radius: 10px;
+  width: 200px;
 }

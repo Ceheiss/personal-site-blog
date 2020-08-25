@@ -10,8 +10,7 @@ const Presentation = () => {
           Cristobal Heiss
           <br />
         </span>{" "}
-        I build
-        <span className={impactWord}>Javascript</span> things
+        I build <span className={impactWord}>Javascript</span> things
       </h1>
     </div>
   )

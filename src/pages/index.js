@@ -15,7 +15,7 @@ const indexPage = () => {
       <Header />
       <About />
       <Projects />
-      <Footer />
+      <Footer id="about" />
     </div>
   )
 }

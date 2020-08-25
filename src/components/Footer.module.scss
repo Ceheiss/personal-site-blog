@@ -1,3 +1,17 @@
 .footer {
   margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 30px auto;
+}
+
+.footerFab {
+  color: black;
+  margin-left: 15px;
+  transition: 0.3s ease-out;
+}
+
+.footerFab:hover {
+  color: gold;
+  transform: scale(1.2);
 }

@@ -31,11 +31,13 @@ const BlogPage = () => {
   const blogPostsList = sortedList.map((blogPost, i) => {
     const { title, date } = blogPost.node.frontmatter
     const { slug } = blogPost.node.fields
+    const { excerpt } = blogPost.node
     return (
       <li key={i} className={blogStyles.post}>
         <Link to={slug}>
           <h2>{title}</h2>
           <p>{formatDate(date)}</p>
+          <p>{excerpt}</p>
         </Link>
       </li>
     )

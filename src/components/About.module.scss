@@ -29,12 +29,6 @@
   line-height: 1.8rem;
 }
 
-@media (max-width: 300px) {
-  .main-title {
-    font-size: 250%;
-  }
-}
-
 @media (max-width: 900px) {
   .content {
     flex-direction: column;

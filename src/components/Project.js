@@ -1,13 +1,14 @@
 import React from "react"
-import { container, projectImage } from "./Project.module.scss"
+import { container, projectImage, projectInfo } from "./Project.module.scss"
 
-const Project = () => {
+const Project = ({ title, image, alt, description }) => {
   return (
     <div className={container}>
-      <div>
-        <h1>I'm a project</h1>
+      <div className={projectInfo}>
+        <h2>{title}</h2>
+        <p>{description}</p>
       </div>
-      <div className={projectImage}>holi</div>
+      <img className={projectImage} alt={alt} src={image} />
     </div>
   )
 }

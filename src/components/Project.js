@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Button from "./Button"
 import {
   container,
@@ -16,7 +15,7 @@ const Project = ({ title, image, alt, description, liveLink, repoLink }) => {
         <p>{description}</p>
         <div className={buttons}>
           <Button url={liveLink}>Check it Live</Button>
-          <Button url={repoLink}>Check it Code</Button>
+          <Button url={repoLink}>Check the Repo</Button>
         </div>
       </div>
       <img className={projectImage} alt={alt} src={image} />

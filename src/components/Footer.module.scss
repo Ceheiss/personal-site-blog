@@ -1,6 +1,7 @@
 .footer {
   margin-top: 3rem;
   display: flex;
+  text-align: center;
   justify-content: center;
   margin: 80px auto 30px auto;
 }
@@ -14,4 +15,10 @@
 .footerFab:hover {
   color: rgb(0, 206, 145);
   transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 15px;
+  }
 }

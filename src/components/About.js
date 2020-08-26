@@ -9,7 +9,7 @@ import {
 } from "./About.module.scss"
 import { Link } from "gatsby"
 import Button from "./Button"
-import perfil from "../images/perfil.png"
+import perfil from "../../static/images/perfil.png"
 import cv from "../../static/cvHeiss.pdf"
 
 const About = () => {

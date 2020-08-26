@@ -10,7 +10,7 @@ const Button = ({ url, children, btnStyle }) => {
       ? `${buttonStyle} ${darkBackground}`
       : `${buttonStyle} ${lightBackground}`
   return (
-    <a href={url} target="_blank">
+    <a href={url} target="_blank" rel="noreferrer">
       <button className={styles}>{children}</button>
     </a>
   )

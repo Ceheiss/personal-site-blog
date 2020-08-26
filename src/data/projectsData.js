@@ -1,9 +1,10 @@
-import calculator from "../images/screenshot-calculator.png"
-import ragnarok from "../images/ragnarok-title.png"
-import url from "../images/url-shortener.png"
-import drumMachine from "../images/percussion.png"
-import randomQuoteService from "../images/random-quote.png"
-import randomQuoteApp from "../images/random-quote-app.png"
+import calculator from "../../static/images/screenshot-calculator.png"
+import ragnarok from "../../static/images/ragnarok-title.png"
+import url from "../../static/images/url-shortener.png"
+import drumMachine from "../../static/images/percussion.png"
+import randomQuoteService from "../../static/images/random-quote.png"
+import randomQuoteApp from "../../static/images/random-quote-app.png"
+import lotrIpsumApp from "../../static/images/lotr-ipsum.png"
 
 const projects = [
   {
@@ -59,6 +60,15 @@ const projects = [
       "This App is a simple React App that shows random Lord of The Rings quotes. I built it because it uses the backend service mentioned above, so it's and example for anyone who would like to use my API. Since both apps are hosted in free services, initial load might take a while",
     liveLink: "https://lotr-random-quote.herokuapp.com/",
     repoLink: "https://github.com/Ceheiss/react-random-lotr-quote",
+  },
+  {
+    title: "Lord of The Ipsum",
+    image: lotrIpsumApp,
+    alt: "Lord of The Ipsum app screenshot",
+    description:
+      "This is an old but beloved app. Since at the time I was building a lot of HTML websites, I needed one lorem ipsum that I really liked, so I built mine with plain HTML, JS and CSS, and a JSON file I wrote to source the data",
+    liveLink: "https://ceheiss.github.io/LordOfTheIpsum/",
+    repoLink: "https://github.com/Ceheiss/LordOfTheIpsum",
   },
 ]
 

@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <footer className={footer}>
-      Developed by {data.site.siteMetadata.author}, ©2020{" "}
+      <p>Developed by {data.site.siteMetadata.author} </p>
       <Link to="https://www.freecodecamp.org/ceheiss" target="_blank">
         <i className={`${footerFab} fab fa-free-code-camp`}></i>
       </Link>{" "}

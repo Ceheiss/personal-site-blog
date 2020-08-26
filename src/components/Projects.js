@@ -10,6 +10,8 @@ const Projects = () => {
       alt={project.alt}
       title={project.title}
       description={project.description}
+      liveLink={project.liveLink}
+      repoLink={project.repoLink}
     />
   ))
   return (

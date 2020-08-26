@@ -5,24 +5,52 @@ import {
   title,
   description,
   content,
+  text,
 } from "./About.module.scss"
+import { Link } from "gatsby"
+import Button from "./Button"
 import perfil from "../images/perfil.png"
+import cv from "../../static/cvHeiss.pdf"
 
 const About = () => {
   return (
     <div className={container}>
       <h1 className={title}>About me</h1>
       <div className={content}>
-        <p className={description}>
-          The Sword of Elendil was forged anew by Elvish smiths, and on its
-          blade was traced a device of seven stars set between the crescent Moon
-          and rayed Sun, and about them was written many runes; for Aragorn son
-          of Arathorn was going to war upon the marches of Mordor. Very bright
-          was that sword when it was made whole again; the light of the sun
-          shone redly in it, and the light of the moon shone cold, its edge was
-          hard and keen. And Aragorn gave it a new name and called it Andúril,
-          Flame of the West.
-        </p>
+        <div className={text}>
+          <div className={description}>
+            <p>
+              I'm a software developer based in Munich that likes to write in{" "}
+              <strong>Javascript</strong>. My <strong>aim</strong> is to create
+              code that is readable, clean, and with short immutable functions
+              when possible.
+            </p>
+            <p>
+              Frameworks are nice, but I like to spend a lot of time in
+              <strong> 'VanillaJS'</strong> to understand what is going on. I
+              like to focus on the front end but I have done some small personal
+              projects with <strong> Node/Express</strong> as well.
+            </p>
+            <p>
+              Currently I'm also learning a bit of Arduino and electronics, more
+              on that on my{" "}
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  fontWeight: "bold",
+                }}
+                to="/blog"
+              >
+                blog
+              </Link>
+              .
+            </p>
+          </div>
+          <Button url={cv} btnStyle="dark">
+            Check my CV
+          </Button>
+        </div>
         <img
           className={pictureStyle}
           alt="author in the lake looking handsome lol"

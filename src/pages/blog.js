@@ -4,12 +4,11 @@ import Head from "../components/Head"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import blogStyles from "./blog.module.scss"
 import formatDate from "../helpers/formatDate"
-import sortDates from "../helpers/sortDates"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             frontmatter {
@@ -27,9 +26,9 @@ const BlogPage = () => {
     }
   `)
 
-  const sortedList = sortDates(data.allMarkdownRemark.edges)
+  const list = data.allMarkdownRemark.edges
 
-  const blogPostsList = sortedList.map((blogPost, i) => {
+  const blogPostsList = list.map((blogPost, i) => {
     const { title, date } = blogPost.node.frontmatter
     const { slug } = blogPost.node.fields
     const { excerpt } = blogPost.node

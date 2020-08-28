@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+// const { paginate } = require("gatsby-awesome-pagination")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -43,3 +44,19 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
+
+// exports.createPages = ({ actions, graphql }) => {
+//   const { createPage } = actions
+
+//   // Fetch your items (blog posts, categories, etc).
+//   const blogPosts = doSomeMagic()
+
+//   // Create your paginated pages
+//   paginate({
+//     createPage, // The Gatsby `createPage` function
+//     items: blogPosts, // An array of objects
+//     itemsPerPage: 2, // How many items you want per page
+//     pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
+//     component: path.resolve("..."), // Just like `createPage()`
+//   })
+// }

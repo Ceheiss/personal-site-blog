@@ -1,10 +1,10 @@
-import calculator from "../../static/images/screenshot-calculator.png"
-import ragnarok from "../../static/images/ragnarok-title.png"
-import url from "../../static/images/url-shortener.png"
-import drumMachine from "../../static/images/percussion.png"
-import randomQuoteService from "../../static/images/random-quote.png"
-import randomQuoteApp from "../../static/images/random-quote-app.png"
-import lotrIpsumApp from "../../static/images/lotr-ipsum.png"
+import calculator from "../images/screenshot-calculator.png"
+import ragnarok from "../images/ragnarok-title.png"
+import url from "../images/url-shortener.png"
+import drumMachine from "../images/percussion.png"
+import randomQuoteService from "../images/random-quote.png"
+import randomQuoteApp from "../images/random-quote-app.png"
+import lotrIpsumApp from "../images/lotr-ipsum.png"
 
 const projects = [
   {

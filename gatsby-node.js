@@ -1,6 +1,5 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-// const { paginate } = require("gatsby-awesome-pagination")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -14,28 +13,39 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const result = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-  `)
+    `
+  )
 
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  // blogs-posts
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       // where the page is accessed
       path: node.fields.slug,
       // template for the page to create (the component)
-      component: path.resolve(`./src/templates/blog.js`),
+      component: path.resolve(`./src/templates/blog-post.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
@@ -43,20 +53,53 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // Create blog-list pages
+  const posts = result.data.allMarkdownRemark.edges
+  const postsPerPage = 4
+  const numPages = Math.ceil(posts.length / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blogs` : `/blogs/${i + 1}`,
+      component: path.resolve(`./src/templates/blog-list.js`),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
 }
 
-// exports.createPages = ({ actions, graphql }) => {
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+// exports.createPages = async ({ graphql, actions }) => {
 //   const { createPage } = actions
+//   const result = await graphql(`
+//     query {
+//       allMarkdownRemark {
+//         edges {
+//           node {
+//             fields {
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-//   // Fetch your items (blog posts, categories, etc).
-//   const blogPosts = doSomeMagic()
-
-//   // Create your paginated pages
-//   paginate({
-//     createPage, // The Gatsby `createPage` function
-//     items: blogPosts, // An array of objects
-//     itemsPerPage: 2, // How many items you want per page
-//     pathPrefix: "/blog", // Creates pages like `/blog`, `/blog/2`, etc
-//     component: path.resolve("..."), // Just like `createPage()`
+//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+//     createPage({
+//       // where the page is accessed
+//       path: node.fields.slug,
+//       // template for the page to create (the component)
+//       component: path.resolve(`./src/templates/blog-post.js`),
+//       context: {
+//         // Data passed to context is available
+//         // in page queries as GraphQL variables.
+//         slug: node.fields.slug,
+//       },
+//     })
 //   })
 // }

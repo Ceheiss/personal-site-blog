@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Head from "../components/Head"
 
-const Blog = ({ data }) => {
+const BlogPost = ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
@@ -27,5 +27,4 @@ export const query = graphql`
     }
   }
 `
-
-export default Blog
+export default BlogPost

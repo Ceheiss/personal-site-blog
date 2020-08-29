@@ -56,11 +56,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Create blog-list pages
   const posts = result.data.allMarkdownRemark.edges
-  const postsPerPage = 4
+  const postsPerPage = 7
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/blogs` : `/blogs/${i + 1}`,
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
       component: path.resolve(`./src/templates/blog-list.js`),
       context: {
         limit: postsPerPage,
@@ -71,35 +71,3 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 }
-
-/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-//   const result = await graphql(`
-//     query {
-//       allMarkdownRemark {
-//         edges {
-//           node {
-//             fields {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//     createPage({
-//       // where the page is accessed
-//       path: node.fields.slug,
-//       // template for the page to create (the component)
-//       component: path.resolve(`./src/templates/blog-post.js`),
-//       context: {
-//         // Data passed to context is available
-//         // in page queries as GraphQL variables.
-//         slug: node.fields.slug,
-//       },
-//     })
-//   })
-// }

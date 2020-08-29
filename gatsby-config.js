@@ -11,7 +11,6 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
-    "gatsby-awesome-pagination",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {

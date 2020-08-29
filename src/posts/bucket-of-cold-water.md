@@ -3,7 +3,7 @@ title: A Bucket of Cold Water
 date: "2019-11-15"
 ---
 
-![](http://www.mdpparish.com/wp-content/uploads/2014/08/bucket-1.jpg)
+![](../images/bucket-1.jpg)
 
 Have you ever received a bucket of cold water? It might not have been very pleasant. It's an overwhelming experience that takes all of your attention, is uncomfortable, and you stand there paralyzed. Well, I had one off those days.
 

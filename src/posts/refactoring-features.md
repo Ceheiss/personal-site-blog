@@ -3,7 +3,7 @@ title: Refactoring and adding new features
 date: "2019-11-25"
 ---
 
-![](http://annabelsmith.com/wp-content/uploads/2012/06/book-proofreading.jpg)
+![](../images/book-proofreading.jpg)
 _looks like this, but with more bits and less ink_
 
 The theme for the week, as decided with my fellow apprentice Preetham was on the topic of **refactoring**. What is refactoring? As a short and sweet answer I would say that is changing and improving working code, but _without changing external behavior_. Refactoring is not about adding features, is the inner wirings of the code.

@@ -3,12 +3,12 @@ title: Tennis refactoring, the tale of a kata
 date: "2019-11-28"
 ---
 
-![](https://static.wixstatic.com/media/8e2dd6_2a1c9620ffaa4c498173e1c71b84668f~mv2.jpg)
+![](../images/nadal.jpg)
 As I previously stated, refactoring is the art of changing existing -working- code, and make it better without altering its external behaviors. As a Kata yesterday, Preetham and I worked on [this](https://github.com/emilybache/Tennis-Refactoring-Kata/blob/master/javascript/TennisGame1.js) source code, that is basically an app to keep track of tennis scores, but is written purposely bad (or not ideally) so you can refactor it. The awesome thing is that the code comes with a very exhaustive amount of tests, so you can refactor and check constantly whether you broke something or not.
 
 Since we didn't work on my computer, today I decided to start from scratch (very much in the fashion of Code Retreat) and refactor during the Kata. I will share what I managed to do and why, but first, let me unload to you a BIG amount of code.
 
-![](http://cdn9.dissolve.com/p/D1744_16_026/D1744_16_026_0004_600.jpg)
+![](../images/trash.jpg)
 
 ```javascript
 TennisGame1.prototype.getScore = function () {

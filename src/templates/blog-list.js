@@ -2,8 +2,9 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import Head from "../components/Head"
+import BlogPagination from "../components/BlogPagination"
 import BlogCounter from "../components/BlogCounter"
-import blogStyles from "./blog.module.scss"
+import { postStyle, postsStyle, subHeader } from "./blog.module.scss"
 
 export default class BlogList extends React.Component {
   render() {
@@ -16,16 +17,15 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <Head title="Blog" />
-        <h2>This is my learning blog</h2>
+        <h2 className={subHeader}>This is my learning blog</h2>
         <BlogCounter />
-        {console.log("POSTS: ", posts)}
-        <ol className={blogStyles.posts}>
+        <ol className={postsStyle}>
           {posts.map(({ node }, i) => {
             const { title, date } = node.frontmatter
             const { slug } = node.fields
             const { excerpt } = node
             return (
-              <li key={i} className={blogStyles.post}>
+              <li key={i} className={postStyle}>
                 <Link to={slug}>
                   <h2>{title}</h2>
                   <p>{date}</p>
@@ -35,26 +35,13 @@ export default class BlogList extends React.Component {
             )
           })}
         </ol>
-        <div className={blogStyles.blogPagination}>
-          {!isFirst && (
-            <Link to={`/blog/${prevPage}`} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
-          {Array.from({ length: numPages }, (_, i) => (
-            <Link
-              key={`pagination-number${i + 1}`}
-              to={`/blog/${i === 0 ? "" : i + 1}`}
-            >
-              {i + 1}
-            </Link>
-          ))}
-          {!isLast && (
-            <Link to={`/blog/${nextPage}`} rel="next">
-              Next Page →
-            </Link>
-          )}
-        </div>
+        <BlogPagination
+          prevPage={prevPage}
+          numPages={numPages}
+          nextPage={nextPage}
+          isFirst={isFirst}
+          isLaste={isLast}
+        />
       </Layout>
     )
   }

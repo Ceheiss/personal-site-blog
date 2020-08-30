@@ -1,9 +1,13 @@
-.posts {
+.sub-header {
+  color: rgb(0, 206, 145);
+}
+
+.posts-style {
   list-style-type: none;
   margin: 0;
 }
 
-.post {
+.post-style {
   margin: 1rem 0;
   a {
     background: #f4f4f4;
@@ -15,6 +19,7 @@
 
   a:hover {
     background: #e4e4e4;
+    outline: 4px solid rgb(0, 206, 145);
   }
 
   h2 {
@@ -39,5 +44,6 @@
 
   a:hover {
     background: #e4e4e4;
+    outline: 4px solid rgb(0, 206, 145);
   }
 }

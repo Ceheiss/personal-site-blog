@@ -142,7 +142,7 @@ TennisGame1.prototype.getScore = function () {
 }
 ```
 
-![](http://m.quickmeme.com/img/12/12b12a0b635a639e67f4db898c62db95b77e75b9436528800194bed9c0dfbf09.jpg)
+![](../images/morfeo.jpg)
 
 ### Conclusion Time
 

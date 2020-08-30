@@ -20,7 +20,7 @@ const About = () => {
         <div className={text}>
           <div className={description}>
             <p>
-              I'm a software developer based in Munich that likes to write in{" "}
+              I'm a Software Developer based in Munich that likes to write in{" "}
               <strong>Javascript</strong>. My <strong>aim</strong> is to create
               code that is readable, clean, and with short immutable functions
               when possible.

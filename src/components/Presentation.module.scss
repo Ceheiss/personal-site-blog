@@ -14,8 +14,26 @@
   justify-content: center;
 }
 
+/* media queries */
 @media (max-width: 768px) {
   .container {
     height: 80vh;
+  }
+}
+
+/* title animation */
+.title {
+  opacity: 0;
+  animation-name: first-appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 0.2s;
+}
+
+@keyframes first-appear {
+  100% {
+    opacity: 1;
   }
 }

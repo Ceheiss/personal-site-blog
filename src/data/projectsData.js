@@ -21,7 +21,7 @@ const projects = [
     image: ragnarok,
     alt: "Odin and Loki",
     description:
-      "This is a turn-based game built mainly in Vanilla JS with a dash of jQuery. Players can move through a map, find weapons, danger, and if they encounter each other... fight!.",
+      "This is a turn-based game built mainly in Vanilla JS with a dash of jQuery. Players can move through a map, find weapons, danger, and if they encounter each other... fight!. Playable in PC.",
     liveLink: "https://ceheiss.github.io/ragnarok-game/",
     repoLink: "https://github.com/Ceheiss/ragnarok-game",
   },
@@ -30,7 +30,7 @@ const projects = [
     image: url,
     alt: "The interface of the app",
     description:
-      "A Node/Express backend application that generates shortened url's. I used MongoDB for data persistance. Currently loads slow because uses a free deployment service",
+      "A Node/Express backend application that generates shortened url's. I used MongoDB for data persistance. Currently loads slow because uses a free deployment service.",
     liveLink: "https://ceheiss-url-shortener.glitch.me/",
     repoLink: "https://github.com/Ceheiss/url_shortener",
   },
@@ -48,7 +48,7 @@ const projects = [
     image: randomQuoteService,
     alt: "The Tree of Gondor with a purple background",
     description:
-      "This is a small service that is opened for requests. Most people when are learning about API's struggle to find a free simple API, so I made one of the Lord of The Rings. The endpoint provides randomly a quote, character who said that quote, and a url to the image(hosted in the same server)",
+      "This is a small service that is opened for requests. Most people when are learning about API's struggle to find a free simple API, so I made one of the Lord of The Rings. The endpoint provides randomly a quote, character who said that quote, and a url to the image(hosted in the same server).",
     liveLink: "https://lotr-random-quote-api.herokuapp.com/",
     repoLink: "https://github.com/Ceheiss/lotr-random-quote-api",
   },
@@ -57,7 +57,7 @@ const projects = [
     image: randomQuoteApp,
     alt: "The Tree of Gondor with a purple background",
     description:
-      "This App is a simple React App that shows random Lord of The Rings quotes. I built it because it uses the backend service mentioned above, so it's and example for anyone who would like to use my API. Since both apps are hosted in free services, initial load might take a while",
+      "This App is a simple React App that shows random Lord of The Rings quotes. I built it because it uses the backend service mentioned above, so it's and example for anyone who would like to use my API. Since both apps are hosted in free services, initial load might take a while.",
     liveLink: "https://lotr-random-quote.herokuapp.com/",
     repoLink: "https://github.com/Ceheiss/react-random-lotr-quote",
   },
@@ -66,7 +66,7 @@ const projects = [
     image: lotrIpsumApp,
     alt: "Lord of The Ipsum app screenshot",
     description:
-      "This is an old but beloved app. Since at the time I was building a lot of HTML websites, I needed one lorem ipsum that I really liked, so I built mine with plain HTML, JS and CSS, and a JSON file I wrote to source the data",
+      "This is an old but beloved app. Since at the time I was building a lot of HTML websites, I needed one lorem ipsum that I really liked, so I built mine with plain HTML, JS and CSS, and a JSON file I wrote to source the data.",
     liveLink: "https://ceheiss.github.io/LordOfTheIpsum/",
     repoLink: "https://github.com/Ceheiss/LordOfTheIpsum",
   },

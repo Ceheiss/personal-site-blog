@@ -40,7 +40,7 @@ export default class BlogList extends React.Component {
           numPages={numPages}
           nextPage={nextPage}
           isFirst={isFirst}
-          isLaste={isLast}
+          isLast={isLast}
         />
       </Layout>
     )

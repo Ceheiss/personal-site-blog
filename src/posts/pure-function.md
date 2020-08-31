@@ -1,6 +1,6 @@
 ---
 title: "Functional Programming 101. What is a Pure Function?"
-date: "2020-12-19"
+date: "2019-12-19"
 ---
 
 In the previous posts we have talked about how apps are data that is presented in a consumable and meaningful way, and how data should be kept **immutable** when possible. Obviously, if we are going to transform the data, we need a way to do it. That way is functions, but not any functions: pure functions.

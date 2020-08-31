@@ -1,10 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
-import blogStyles from "../templates/blog.module.scss"
+import { currentNum, blogPaginationStyle } from "./BlogPagination.module.scss"
 
-const BlogPagination = ({ prevPage, numPages, nextPage, isFirst, isLast }) => {
+const BlogPagination = ({
+  currentPage,
+  prevPage,
+  numPages,
+  nextPage,
+  isFirst,
+  isLast,
+}) => {
   return (
-    <div className={blogStyles.blogPagination}>
+    <div className={blogPaginationStyle}>
       {!isFirst && (
         <Link to={`/blog/${prevPage}`} rel="prev">
           ← Previous Page
@@ -15,7 +22,11 @@ const BlogPagination = ({ prevPage, numPages, nextPage, isFirst, isLast }) => {
           key={`pagination-number${i + 1}`}
           to={`/blog/${i === 0 ? "" : i + 1}`}
         >
-          {i + 1}
+          {i + 1 === currentPage ? (
+            <span className={currentNum}>{i + 1}</span>
+          ) : (
+            <span>{i + 1}</span>
+          )}
         </Link>
       ))}
       {!isLast && (

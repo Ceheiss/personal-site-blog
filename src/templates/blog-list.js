@@ -36,6 +36,7 @@ export default class BlogList extends React.Component {
           })}
         </ol>
         <BlogPagination
+          currentPage={currentPage}
           prevPage={prevPage}
           numPages={numPages}
           nextPage={nextPage}

@@ -24,11 +24,10 @@ If I wanted to conditionally render something I just used a ternary. Well, not i
 ```html
 <ul>
   <li *ngFor="item hero of items">{{item.title}}</li>
-  <li></li>
 </ul>
 ```
 
-`*ngFor` is a thing called a directive, we also have those for conditional rendering like `*ngIf`, **pipes** for fast text formating and so on, the thing is, is a whole different approach.
+`*ngFor` is a thing called a directive, we also have those for conditional rendering like `*ngIf`, **pipes** for fast text formating and so on, the thing is, it is a whole different approach.
 
 ## Different Paradigm
 

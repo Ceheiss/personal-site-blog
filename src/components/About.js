@@ -32,7 +32,7 @@ const About = () => {
               projects with <strong> Node/Express</strong> as well.
             </p>
             <p>
-              Currently I'm also learning a bit of Arduino and electronics, more
+              Currently I'm also learning "the ways of the snake" with Python, more
               on that on my{" "}
               <Link
                 style={{

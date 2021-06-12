@@ -1,5 +1,5 @@
 ---
-title: Angular vs. React:\ Displaying Customized Components
+title: "Angular vs. React: Displaying Customized Components"
 date: "2021-06-11"
 ---
 

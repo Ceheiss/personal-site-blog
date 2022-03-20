@@ -1,6 +1,6 @@
 ---
 title: How to Design Worlds
-date: "2022-03-22"
+date: "2022-03-20"
 ---
 In the last blog post we talked about how to design data, which in short is thinking about the data that our program will use, how we are going to represent problem domain things with data. We went through some specific steps (HtdD recipe), that helped us have a better understanding of the data we are going to use later in our functions. 
 So we have two pieces of the puzzle, how to design functions, how to design data, and now we close it all with how to design worlds.

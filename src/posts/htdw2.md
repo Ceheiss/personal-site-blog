@@ -11,12 +11,20 @@ In Racket, we will start with a mechanism called **define-struct** that will ena
 
 So how do we do it? We are able to create compound data using the “define-struct” primitive. Here is how we use it:
 
+![](../images/pacman.gif)
+
 *(define-struct position (x y))*           → definition (x and y are the “field” names)
+
 *(make-position 3 6)*                      → constructor
+
 *(define P1 (make-position 3 6))*          → saved on a constant
+
 *(position-x P1)*                          → is a selector. Returns 3
+
 *(position-y P1)*                          → is a selector. Returns 6
+
 *(position? P1)*                           → is a predicate. Returns true
+
 *(position? “coolio”)*                     → is a predicate. Returns false
 
 So it looks kind of silly, I'll admit, but in the end we use *define-struct* as a primitive, first argument is the name of this "dictionary" and in parenthesis we add the keys of the dictionary.

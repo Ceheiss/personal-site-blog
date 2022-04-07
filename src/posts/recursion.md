@@ -1,6 +1,6 @@
 ---
 title: Using Lists and Recursion in Racket
-date: "2022-05-07"
+date: "2022-04-07"
 ---
 
 Sometimes we need to operate on data of arbitrary size, meaning, we are not quite sure the number of elements we are dealing with (think for instance, you receive a list of countries visited by different users). How would we go about it Racket? Will we for-loop through the list length? (newsflash, we won't). That is this week's topic, we will learn about how lists work on Racket, how to make a Data Definition for these cases, and finally how to make functions that will operate on this type of data. It’s a bit of land to cover, so let’s get started.

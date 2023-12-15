@@ -26,14 +26,14 @@ const About = () => {
               when possible.
             </p>
             <p>
-              Frameworks are nice, but I like to spend a lot of time in
-              <strong> 'VanillaJS'</strong> to understand what is going on. I
-              like to focus on the front end but I have done some small personal
-              projects with <strong> Node/Express</strong> as well.
+              Frameworks are nice, but I like to spend a lot of time with
+              <strong> 'VanillaJS'</strong> to understand what is going on. That being,
+                I have experience working with <strong>React</strong>, <strong>Next.JS</strong> and some
+                  bits and bytes of <strong> Node/Express</strong> as well.
             </p>
             <p>
-              Currently I'm also learning "the ways of the snake" with Python, more
-              on that on my{" "}
+              Currently working on Global Savings Group, moving between Design Systems, building POCs,
+              and tweaking thinngs. Oh, and here is my{" "}
               <Link
                 style={{
                   textDecoration: "none",

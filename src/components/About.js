@@ -33,7 +33,7 @@ const About = () => {
             </p>
             <p>
               Currently working on Global Savings Group, moving between Design Systems, building POCs,
-              and tweaking thinngs. Oh, and here is my{" "}
+              and tweaking things. Oh, and here is my{" "}
               <Link
                 style={{
                   textDecoration: "none",
